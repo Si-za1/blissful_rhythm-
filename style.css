@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300&family=Quicksand:wght@300;500&family=Raleway:wght@200&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-size: 32px;
+    font-weight:800;
+    font-family:  'Raleway', sans-serif;
+    margin-bottom: 2%;
+}
+/* Styling for the sections */
+section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow:  5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    justify-content: space-evenly;
+  }
+  
+  
+  .card img {
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    z-index: 2;
+  }
+
+  h2{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Raleway';
+    margin-bottom: 10px;
+  }
+  
+
+  /* Flexbox layout for aligning sections beside each other */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+  }
+
+  /* for the button */
+
+  button{
+    margin-top: 8%;
+    padding:10px;
+    border-radius: 12px;
+    background:#9AC2B8;
+    color:whitesmoke;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 200;
+    border: none;
+    outline: none;
+  }
+
+  .back button{
+    margin-left: 45%;
+    margin-top: 8%;
+    padding:15px;
+    border-radius: 12px;
+    background:#051410;
+    color:whitesmoke;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 200;
+    border: none;
+    outline: none;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    section {
+      width: 100%;
+    }
+  }
+  
