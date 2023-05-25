@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pomo.css">
+    <title>Pomodoro Timer </title>
+</head>
+
+<body>
+    <div class="time-container">
+        <!-- heading -->
+            <img src="./pomod.svg" alt="pomodoro" class="title"> 
+
+
+        <!-- the work status for the POMO -->
+        <div class="status">
+            <p id="work"> <img src="./focus.svg" alt="focus"></p>
+            <p id="sbreak"> <img src="./sb.svg" alt="shortbreak"> </p>
+            <p id="lbreak"> <img src="./lb.svg" alt="longbreak"> </p>
+        </div>
+
+        <div class="displaytime">
+            <!-- work time display -->
+            <div class="worktime">
+                <p id="minutes">  25 </p>
+                <p id="colon"> : </p>
+                <p id="seconds"> 00</p>
+            </div>
+             <!-- break time display -->
+             <div class="shortbreak">
+                <p id="sm"> 5  </p>
+                <p id="colon"> : </p>
+                <p id="ss"> 00</p>
+            </div>
+            <div class="longbreak">
+                <p id="lm"> 15  </p>
+                <p id="colon"> : </p>
+                <p id="ls"> 00</p>
+            </div>
+        </div>
+
+
+        <!-- button display -->
+        <div class="button">
+            <button id="start"> Start</button>
+            <button id="pause"> Pause </button>
+            <button id="reset"> Reset </button>
+        </div>
+
+        
+    </div>
+
+    <p class="focus"> Time to focus </p>
+
+    <audio id="sound" src="./sound.wav"></audio>
+    <audio id="endsound" src="./end.mp3"></audio>
+
+
+    <script src="./pomo.js"></script>
+</body>
+
+</html>

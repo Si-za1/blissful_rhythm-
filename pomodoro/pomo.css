@@ -1,7 +1,138 @@
 :root{
-   --color-primary: #FF6347 (tomato red)
-   --color-secondary : #68B9FF (sky blue)
-   --color-accent: #F4C361 (golden yellow)
-   --color-background: #FFFFFF (white or off-white)
-   --color-text: #333333 (dark gray)
+   --color-primary: #FF6347 ;
+   --color-secondary : #68B9FF ;
+   --color-accent: #F4C361 ;
+   --color-background: #FFFFFF ;
+   --color-text: #333333 ;
 }
+
+body{
+   background-color: var(--color-primary) ;
+}
+.time-container{
+   display: flex;
+   background-color: rgba(144, 121, 121, 0.3); 
+   padding: 10px;
+   max-width: 90%;
+   margin-left: 5%;
+   margin-top: 3%;
+}
+
+.title{
+   width:10%;
+   margin-top: -24%;
+   padding: 2px;
+}
+
+.status{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-start;
+   gap:120px;
+   margin-top: 2%;
+   margin-left: 15%;
+}
+
+.displaytime{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: flex-start;
+   gap: 20px;
+   margin-top: 10px;
+   margin-left: -46%;
+}
+
+
+
+
+.worktime
+{
+   font-family: 'Roboto';
+   font-size: 50px;
+   font-weight: 800;
+   color: var(--color-background);
+   display: flex;
+   gap: 20px;
+   margin-top: 14%;
+   /* margin-left: -261%; */
+   justify-content: center;
+   align-items: center;
+}
+
+.shortbreak,
+.longbreak {
+  font-family: 'Roboto';
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--color-background);
+  display: flex;
+  gap: 20px;
+  margin-top: 14%;
+  margin-left: 12%;
+
+  
+}
+
+
+.button {
+   display: flex;
+   margin-top: 30%;
+   margin-left: -30%;
+   gap:20px;
+   margin-bottom: 1%;
+}
+
+#start{
+   padding:20px;
+   color: var(--color-secondary);
+   background-color: var(--color-background);
+   border:none;
+   outline: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+#pause{
+   padding:20px;
+   color: var(--color-text);
+   background-color: var(--color-accent);
+   border:none;
+   outline: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+#reset{
+   padding:20px;
+   color: var(--color-secondary);
+   background-color: var(--color-text);
+   border:none;
+   outline: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+
+.focus {
+   margin-top: 1%;
+   margin-left: 45%;
+   color: var(--color-background);
+   font-size: Roboto;
+   font-weight: 300;
+   font-size: 14px;
+}
+
+#start:hover {
+   animation: glowing 1s infinite;
+ }
+ 
+ @keyframes glowing {
+   0% {
+     box-shadow: 0 0 5px #FF6347, 0 0 20px #FF6347, 0 0 30px #FF6347;
+   }
+   50% {
+     box-shadow: 0 0 20px #FF6347, 0 0 30px #FF6347, 0 0 40px #FF6347;
+   }
+ }
