@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,47 @@
     <link rel="stylesheet" href="./quiz.css">
     <title>Quiz Game </title>
 </head>
+
 <body>
-    
+    <div class="quiz-container" id="quiz">
+        <h1> Get ready to test your Brain</h1>
+        <div class="quiz-header">
+            <p id="question-number"></p>
+            <p id="questions">
+             Multiple choice questions 
+            </p>
+
+            <div class="options">
+                <ul>
+                    <li>
+                        <input class="answer" type="radio" name="answer" id="a">
+                        <label for="a" id="optionA"> Option A </label>
+                    </li>
+
+                    <li>
+                        <input class="answer" type="radio" name="answer" id="b">
+                        <label for="b" id="optionB"> Option B </label>
+                    </li>
+
+                    <li>
+                        <input class="answer" type="radio" name="answer" id="c">
+                        <label for="c" id="optionC"> Option C </label>
+                    </li>
+
+                    <li>
+                        <input class="answer" type="radio" name="answer" id="d">
+                        <label for="d" id="optionD"> Option D </label>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <button id="submit"> Submit </button>
+    </div>
+    <audio id="endSound" src="sound.mp3"></audio>
+
     <script src="./quiz.js"></script>
 </body>
+
 </html>
