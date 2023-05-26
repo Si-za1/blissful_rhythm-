@@ -87,7 +87,7 @@ pause.addEventListener("click", function () {
 
 	start.disabled = false;
 	pause.disabled = true;
-	reset.disabled = true;
+	reset.disabled = false;
 
 	var sound = document.getElementById("sound");
 	sound.pause();
