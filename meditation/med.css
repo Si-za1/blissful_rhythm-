@@ -24,6 +24,7 @@ body::after {
   z-index: -1; 
 }
 
+
 .input {
   display: flex;
   flex-direction: column;
@@ -117,4 +118,19 @@ button:hover {
 .button-inactive {
   pointer-events: none;
   background-color: #969696;
+}
+
+
+.video{
+  padding: 15px 20px;
+  border-radius: 8px;
+  width:100%;
+  background-color: #6236ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin-left:-50%;
+  margin-top:400%;
 }
