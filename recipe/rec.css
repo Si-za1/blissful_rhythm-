@@ -1,0 +1,89 @@
+.main-container {
+	display: flex;
+	justify-content: flex-start;
+    margin-top: 2%;
+}
+
+.search {
+	display: flex;
+	align-items: flex-start;
+	margin-left: 5%;
+}
+
+.search input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.search label {
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	margin-top: 5%;
+    margin-left: 0%;
+}
+.menu,
+.menu1 {
+	width: 300px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+}
+
+.menu img,
+.menu1 img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.menu h4,
+.menu1 h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.menu p,
+.menu1 p {
+	margin-bottom: 10px;
+}
+
+.menu a,
+.menu1 a {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.menu button,
+.menu1 button {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.menu button:hover,
+.menu1 button:hover {
+	background-color: #555;
+}
+
+@media (max-width: 768px) {
+	.menu,
+	.menu1 {
+		width: 100%;
+		max-width: 400px;
+	}
+}
