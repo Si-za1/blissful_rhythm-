@@ -1,0 +1,74 @@
+body {
+	font-family: roboto, sans-serif;
+	background-image: url("./lovebackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+/* main container style */
+#main-container {
+	width: 500px;
+	height: 500px;
+	background-color: rgb(248, 244, 240);
+	padding: 20px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 8px;
+}
+
+/* texts style */
+h1 {
+	font-size: 40px;
+	font-weight: 800;
+	color: rgb(195, 119, 31);
+}
+
+p {
+	font-size: 14px;
+	font-style: oblique;
+	color: rosybrown;
+}
+
+/* Style for the labels */
+label {
+	display: block;
+	margin: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: rosybrown;
+}
+
+/* Style for the input fields */
+input[type="text"] {
+	width: 200px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#calculate {
+	width: 30%;
+	border: none;
+	outline: none;
+	padding: 10px;
+	margin-top: 30px;
+	background-color: red;
+	border-radius: 8px;
+	color: black;
+	font-weight: 400;
+}
+
+/* result area */
+
+#result {
+	font-size: 20px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-weight: 400;
+	color: rosybrown;
+}
+
+#result-percentage {
+	font-size: 30px;
+	font-weight: 300;
+}
