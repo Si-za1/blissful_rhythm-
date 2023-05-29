@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./rps.css">
+    <title> Rock Paper Scissor </title>
+</head>
+<body>
+
+    <p id="start"> Click the icons to start the game </p>
+ 
+    <!-- Opponent Choice -->
+    <h2 id="gamestatus"> </h2>
+    <h2 id="opponent-score"> Opponent </h2>
+    <img alt="" id="opponent-choice">
+    <div id="opponent-total-score"></div>
+
+    <br>
+
+    <!-- User Choice -->
+    <img alt="" id="user-choice">
+    <div id="choices"></div>
+    <h2 id="user-score">User </h2>
+    <div id="user-total-score"></div>
+
+    <!-- for the audio -->
+    <audio id="success-audio">
+        <source src="claps.mp3" type="audio/mp3">
+    </audio>
+    <audio id="gameover-audio">
+        <source src="gameover.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- buttons  -->
+    <button id="restart"> Restart Game </button>
+
+    <!-- javascript -->
+    <script src="./rps.js"></script>
+</body>
+</html>
+

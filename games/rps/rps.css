@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    background: #000000;
+}
+
+#opponent-choice{
+   width:80px;
+}
+
+#user-choice{
+    width:80px;
+}
+
+#user-score{
+    margin:0;
+    color:wheat;
+    margin-bottom: 12px;
+}
+
+#opponent-score{
+    margin:0;
+    color:wheat;
+}
+
+#choices{
+    display: flex;
+    width:240px;
+    height:240px;
+    margin: 0 auto;
+    margin-top:12px;
+    cursor:pointer;
+    justify-content: space-around;
+ 
+}
+
+#choices img{
+    width:20%;
+}
+
+#gamestatus{
+    margin-top:3%;
+    margin-bottom:2%;
+    font-size: 32px;
+    color:#00FF00;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+}
+
+#start{
+    padding: 10px;
+    background: #00FFFF;
+    opacity: 0.8;
+    cursor: pointer;
+    color:white;
+}
+
+#restart{
+    padding: 10px;
+    background: #00FF00;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    cursor: pointer;
+    color:black;
+}

@@ -66,7 +66,7 @@ var degreeStatus = document.querySelector(".degree-status");
 var degreeElement = document.querySelector(".degree");
 
 //automated changes
-var changeRandomWeather = setInterval(updateWeather, 9000);
+var changeRandomWeather = setInterval(updateWeather, 5000);
 
 // to display random weather from the static data
 locationUpdate.addEventListener("click", updateWeather);
@@ -103,13 +103,13 @@ function convertToFahrenheit() {
 }
 
 function convertToCelsius() {
-	if (isFahrenheit) {
+	 
 		var temperatureF = parseFloat(degreeElement.textContent);
 		var temperatureC = ((temperatureF - 32) * 5) / 9;
 		degreeElement.textContent = temperatureC.toFixed(1);
 		degreeStatus.textContent = "C";
 		isFahrenheit = false;
-	}
+	
 }
 
 // now to displaying weather from the above data
