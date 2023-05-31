@@ -1,10 +1,11 @@
-window.onload = function () {
+// variable declarations
 	let button = document.getElementById("calculate");
+
+// for the event listener 
 	button.addEventListener("click", calculateLove);
-};
+
 
 //now to calculate the love percentage
-
 function calculateLove() {
 	let yourName = document.getElementById("your-name").value;
 	let crushName = document.getElementById("crush-name").value;
@@ -19,7 +20,7 @@ function calculateLove() {
 			crushName +
 			" " +
 			"have the love chances of :";
-		document.getElementById("result-percentage").innerText =
-			lovePercentage.toString() + "%";
+
+		document.getElementById("result-percentage").innerText = lovePercentage.toString() + "%";
 	}
 }
