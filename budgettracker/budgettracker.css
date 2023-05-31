@@ -1,0 +1,210 @@
+/* creating the variables */
+:root {
+	--background: #f5f5f5;
+	--primary: #2c3e50;
+	--button-text: #ffffff;
+	--button-color: #3498db;
+	--container-color: #f2f2f2;
+	--extra: #ffc107;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	background-color: var(--background);
+}
+
+/* main container */
+.main-container {
+	width: 90%;
+	font-size: 20px;
+	max-width: 90%;
+	margin: 10px auto;
+}
+
+.container {
+	width: 100%;
+}
+
+.sub-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.flex-space {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-container h3 {
+	color: var(--primary);
+	font-weight: 400;
+	margin-bottom: 0.6em;
+}
+
+.container input {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 7px;
+	color: #414a67;
+	outline: none;
+	font-weight: 400;
+	margin-bottom: 0.6em;
+}
+
+/* for the container with items */
+.income-container,
+.expense-container {
+	background-color: var(--container-color);
+	padding: 1.25em 0.9em;
+	border-radius: 0.3em;
+	box-shadow: 0 0.6em 1.2em rgba(58, 53, 66, 0.3);
+}
+.output-container {
+	background-color: var(--primary);
+	color: var(--button-text);
+	border-radius: 0.3em;
+	box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.3);
+	margin: 2em 0;
+	padding: 1.2em;
+}
+.output-container p {
+	font-weight: 500;
+	margin-bottom: 0.6em;
+}
+.output-container span {
+	display: block;
+	text-align: center;
+	font-weight: 400;
+	color: #e5e5e5;
+}
+
+/* button of income and expense */
+.submit {
+	font-size: 20px;
+	margin-top: 12px;
+	background-color: var(--button-color);
+	border: none;
+	outline: none;
+	color: var(--button-text);
+	padding: 0.6em 1.2em;
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+.list {
+	background-color: var(--container-color);
+	padding: 1.8em 1.2em;
+	box-shadow: 0 0.6em 1.2em rgba(98, 91, 111, 0.5);
+	border-radius: 0.6em;
+}
+.sublist-content {
+	width: 100%;
+	margin-bottom: 0.6em;
+	padding: 0.5em 1em;
+	display: grid;
+	grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+.product {
+	font-weight: 500;
+	color: var(--button-color);
+}
+.amount {
+	color: var(--primary);
+	margin-left: 20%;
+}
+.icons-container {
+	width: 5em;
+	margin: 1.2em;
+	align-items: center;
+}
+.product-title {
+	margin-bottom: 1em;
+}
+.hide {
+	display: none;
+}
+.error {
+	color: #ff465a;
+}
+.edit {
+	margin-left: auto;
+}
+
+.edit,
+.delete {
+	background: transparent;
+	cursor: pointer;
+	margin-right: 1.5em;
+	border: none;
+	color: var(--button-color);
+}
+
+/* for expense goal  */
+  
+  .expense-goal-container h3 {
+    font-size: 1.2em;
+  }
+  
+  .expense-goal-container input {
+    background-color: var(--primary);
+	padding: 10px;
+	box-shadow: 0 0.6em 1.2em rgba(98, 91, 111, 0.05);
+	border-radius: 0.6em;
+    border:none;
+    outline:none;
+    margin-bottom:20px;
+    color: var(--button-text);
+  }
+  
+  .expense-goal-container button {
+    font-size: 20px;
+	margin-top: 12px;
+	background-color: var(--button-color);
+	border: none;
+	outline: none;
+	color: var(--button-text);
+	padding: 8px;
+	border-radius: 0.3em;
+	cursor: pointer;
+  }
+
+  /* refresh button */
+  #refresh-button{
+    font-size: 20px;
+	margin-top: 12px;
+	background-color: var(--primary);
+	border: none;
+	outline: none;
+	color: var(--button-text);
+	padding: 8px;
+	border-radius: 0.3em;
+	cursor: pointer;
+  }
+  
+/* for responsive */
+
+@media screen and (max-width: 600px) {
+	.main-container {
+		font-size: 14px;
+	}
+	.sub-container {
+		grid-template-columns: 1fr;
+		gap: 1em;
+	}
+}
