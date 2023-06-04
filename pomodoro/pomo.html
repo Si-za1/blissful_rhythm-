@@ -10,9 +10,18 @@
 </head>
 
 <body>
+
+    <!-- for navigation to the home page -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html"> <- Take me home </a></li>
+        </ul>
+    </nav>
+
+
     <div class="time-container">
         <!-- heading -->
-            <img src="./pomod.svg" alt="pomodoro" class="title"> 
+        <img src="./pomod.svg" alt="pomodoro" class="title">
 
 
         <!-- the work status for the POMO -->
@@ -22,21 +31,27 @@
             <p id="lbreak"> <img src="./lb.svg" alt="longbreak"> </p>
         </div>
 
+
+        <!-- audio sources for the timer -->
+        <audio id="sound" src="./start.mp3"></audio>
+        <audio id="endsound" src="./ends.mp3"></audio>
+
         <div class="displaytime">
             <!-- work time display -->
             <div class="worktime">
-                <p id="minutes">  25 </p>
+                <p id="minutes"> 25 </p>
                 <p class="time-separator"> : </p>
                 <p id="seconds"> 00</p>
             </div>
-             <!-- break time display -->
-             <div class="shortbreak">
-                <p id="sm"> 5  </p>
+            <!-- break time display -->
+            <div class="shortbreak">
+                <p id="sm"> 5 </p>
                 <p class="time-separator"> : </p>
                 <p id="ss"> 00</p>
             </div>
+            <!-- long break time display -->
             <div class="longbreak">
-                <p id="lm"> 15  </p>
+                <p id="lm"> 15 </p>
                 <p class="time-separator"> : </p>
                 <p id="ls"> 00</p>
             </div>
@@ -50,14 +65,7 @@
             <button id="reset"> Reset </button>
         </div>
 
-        
     </div>
-
-    <p class="focus"> Time to focus! </p>
-
-    <audio id="sound" src="./start.mp3"></audio>
-    <audio id="endsound" src="./ends.mp3"></audio>
-
 
     <script src="./pomo.js"></script>
 </body>

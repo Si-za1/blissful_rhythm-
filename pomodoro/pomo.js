@@ -1,3 +1,4 @@
+// getting all the elements
 const workTitle = document.getElementById("work");
 const shortTitle = document.getElementById("sbreak");
 const longTitle = document.getElementById("lbreak");
@@ -53,7 +54,7 @@ start.addEventListener("click", function () {
 
 // for the reset button
 reset.addEventListener("click", function () {
-	min.textContent = 25;
+	min.textContent = 25;                    // to change the time to the minimum
 	sec.textContent = "00";
 	stopInterval();
 	startTimer = undefined;
@@ -75,6 +76,7 @@ reset.addEventListener("click", function () {
 
 	currentBreak = "";
 
+	// for pausing the audio 
 	var sound = document.getElementById("sound");
 	sound.pause();
 	sound.currentTime = 0;
@@ -137,6 +139,7 @@ function timer() {
 	}
 }
 
+// to start the short break if the short is chosen in the prompt
 function startShortBreak() {
 	currentBreak = "short";
 	shortMinute.textContent = 5; // Reset short break minutes
@@ -144,6 +147,7 @@ function startShortBreak() {
 	startTimer = setInterval(shortBreakTimer, 1000);
 }
 
+// to start the long break if the long is chosen in the prompt
 function startLongBreak() {
 	currentBreak = "long";
 	longBreak.textContent = 15; // Reset long break minutes
@@ -151,6 +155,7 @@ function startLongBreak() {
 	startTimer = setInterval(longBreakTimer, 1000);
 }
 
+// for the timer of the short break 
 function shortBreakTimer() {
 	if (shortSecond.textContent != 0) {
 		shortSecond.textContent--;
@@ -160,6 +165,7 @@ function shortBreakTimer() {
 	}
 }
 
+// for the timer of the long break 
 function longBreakTimer() {
 	if (longSecond.textContent != 0) {
 		longSecond.textContent--;

@@ -10,9 +10,20 @@
 </head>
 
 <body>
+
+  <!-- the nav bar  -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html"> <- Take me home </a></li>
+    </ul>
+  </nav>
+
   
-    
-  
+  <!-- button for the video -->
+  <a href="./videomeditation.html"><button class="video"> For Video Session </button></a>
+
+
+  <!-- for the number of breaths -->
   <div class="input">
     <label>Select Breaths</label>
     <select class="breath-input">
@@ -21,20 +32,29 @@
       <option value="7">7 Breaths</option>
     </select>
   </div>
+
+  <!-- audio for breathing -->
   <audio src="breathe-in.mp3" preload="auto"></audio>
   <audio src="breath-hold.mp3" preload="auto"></audio>
   <audio src="brethe-out.mp3" preload="auto"></audio>
 
-
+  <!-- for the moment of the breathing transistion -->
   <div class="circle-wrap">
     <div class="circle-out"></div>
     <div class="circle-in"></div>
   </div>
-  <p class="breaths">Breaths remaining: <span class="breaths-text">3</span></p>
-  <p class="instructions">Are you ready to start breathing?</p>
-  <button class="start">Begin</button>
 
-  <a href="./meditation.html"><button class="video"> For Video Session </button></a>
+  <!-- texts for the meditation session -->
+  <p class="breaths"> Breaths remaining: <span class="breaths-text">3</span></p>
+  <p class="instructions">Are you ready to start breathing?</p>
+
+  <!-- the buttons -->
+  <div class="buttons">
+    <button class="start">Begin</button>
+    <button class="stop">Stop</button>
+  </div>
+
+
   <script src="./med.js"></script>
 </body>
 

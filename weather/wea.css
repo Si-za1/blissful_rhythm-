@@ -12,9 +12,42 @@ body {
 	flex-direction: column;
 	background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
 	color: antiquewhite;
-	font-family: Roboto, sans-serif;
+	font-family: inter, sans-serif;
 }
 
+/* Navbar */
+  .navbar {
+    float: right;
+    padding: 10px;
+	margin-top: -1%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+	font-family: inter, sans-serif;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #131212;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    background-color: #9ebbbd;
+}
+
+/* location and temperature */
 .location,
 .temperature {
 	width: 50%;
@@ -22,12 +55,18 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	font-size: 18px;
+	font-family: inter;
+	font-weight: 300;
+	font-style: normal;
 }
 
 .temperature {
 	flex-direction: column;
 }
 
+/* degree status */
 .degree-section {
 	display: flex;
 	align-items: center;
@@ -43,6 +82,7 @@ body {
 	font-size: 30px;
 }
 
+/* random weather display */
 .location-click {
 	cursor: pointer;
 	background-color: rgb(39, 120, 174);

@@ -1,8 +1,12 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300&family=Quicksand:wght@300;500&family=Raleway:wght@200&display=swap");
+
+/* resets */
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: Roboto;
+	font-family: inter, sans-serif;
 	font-weight: 300;
 }
 
@@ -14,7 +18,9 @@ body {
 	color: aliceblue;
 	background: url(./bg1.jpg);
 	background-size: cover;
+  position: relative; 
 }
+
 body::after {
   content: "";
   position: absolute;
@@ -24,11 +30,67 @@ body::after {
   z-index: -1; 
 }
 
+/* navbar */
+.navbar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  float: right;
+  padding: 10px;
+}
 
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: #4C65C0;
+  opacity: 0.9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.navbar a:hover {
+  background-color: #9ebbbd;
+}
+
+/* the video */
+
+.video{
+  display: flex;
+  position: absolute;
+  top:10px;
+  right: 250px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #5c4b9a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  
+}
+
+
+/* the display box */
 .input {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 30%;
+  margin-left: 5%;
 }
 
 .input label {
@@ -43,7 +105,7 @@ body::after {
   min-width: 300px;
   font-size: 16px;
   padding: 8px 4px;
-  background-color: #6236ff;
+  background-color: #5e4d9a;
   color: #fff;
 }
 
@@ -51,6 +113,7 @@ body::after {
   outline: none;
 }
 
+/* the circle that moves */
 .circle-wrap {
   display: flex;
   flex-direction: column;
@@ -74,7 +137,7 @@ body::after {
   width: 51px;
   height: 50px;
   position: absolute;
-  background-color: #6236ff;
+  background-color: #5d4b9e;
   border-radius: 50%;
   transition: 4s ease all;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -84,33 +147,52 @@ body::after {
   transform: scale(5.3);
 }
 
+
+/* the breathing texts */
 .breaths {
   text-align: center;
-  margin-bottom: -22%;
-  margin-left:-5%;
   font-size: 24px;
+  margin-bottom: 20px;
+  margin-left:2%;
 }
 
 .instructions {
   text-align: center;
-  margin-bottom: -22%;
-  margin-left:1%;
+  margin-bottom: 20px;
+  margin-left: 2%;
 }
 
-button {
+
+/* buttons */
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+}
+/* the begin */
+.start,
+.stop {
+  flex: 1; /* Add this property */
   padding: 8px 20px;
   border-radius: 8px;
   background-color: #6236ff;
   color: #fff;
   border: none;
+  outline: none;
   cursor: pointer;
   transition: 0.3s ease all;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  margin-bottom: -30%;
-  margin-left:-20%;
+  margin: 0 10px; 
 }
 
-button:hover {
+.stop {
+  background-color: #bc5530;
+}
+
+.start:hover,
+.stop:hover {
   background-color: #f1f1f1;
   color: #6236ff;
 }
@@ -121,16 +203,13 @@ button:hover {
 }
 
 
-.video{
-  padding: 15px 20px;
-  border-radius: 8px;
-  width:100%;
-  background-color: #6236ff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease all;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  margin-left:-50%;
-  margin-top:400%;
+
+
+/* for the video session */
+
+@media screen and (max-width: 480px) {
+  .video {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

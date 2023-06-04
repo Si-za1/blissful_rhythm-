@@ -59,13 +59,19 @@ function displayTodos() {
 		input.checked = todo.done;
 		span.classList.add("bubble");
 
-		// for choosing the category of business or personal
+		// for choosing the category of business or personal or selfcare
 
 		if (todo.category === "personal") {
 			span.classList.add("personal");
 			input.classList.add("personal-checkbox");
-		} else {
+		} else if(todo.category==="business") {
 			span.classList.add("business");
+			input.classList.remove("personal-checkbox");
+		}else if(todo.category==="selfcare"){
+			span.classList.add("selfcare");
+			input.classList.remove("personal-checkbox");
+		}else{
+			span.classList.add("fitness");
 			input.classList.remove("personal-checkbox");
 		}
 
@@ -76,12 +82,14 @@ function displayTodos() {
 		edit.classList.add("edit");
 		deleteButton.classList.add("delete");
 
-		//for the displaying of the time
+		
+		//for the displaying of the time and date created at
 		const createdAt = new Date(todo.createdAt);
+		const dateString = createdAt.toLocaleDateString();
 		const timeString = createdAt.toLocaleTimeString();
 
 		content.innerHTML = `<input type="text" value="${todo.content}" readonly>
-         <span class="created-time">Time created: ${timeString}</span>`;
+         <span class="created-time">Time created at: ${timeString} & on ${dateString}</span>`;
 
 		edit.innerHTML = "Edit";
 		deleteButton.innerHTML = "Delete";
@@ -96,11 +104,7 @@ function displayTodos() {
 
 		todoList.appendChild(todoItem);
 
-		
-        // if (todo.done) {
-		// 	todoItem.classList.add('done');
-		// }
-		
+			
 
 		//for striking through the done object while pressing the checked button
 

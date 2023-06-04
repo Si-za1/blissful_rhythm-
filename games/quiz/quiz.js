@@ -167,6 +167,6 @@ submitButton.addEventListener("click", () => {
 	function endQuiz() {
 	  quiz.innerHTML = `
 		<h2> You scored ${currentScore} out of ${data.length} questions correctly </h2>
-		<button onclick="location.reload()"> Play more ! </button>
+		<button onclick="location.reload()" id="play-more"> Play more ! </button>
 	  `;
 	}

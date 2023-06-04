@@ -1,11 +1,15 @@
+// getting all the elements 
 const circleIn = document.querySelector(".circle-in");
 const breathNumCount = document.querySelector(".breath-input");
-const begin = document.querySelector(".start");
+
 const instructions = document.querySelector(".instructions");
 const breathText = document.querySelector(".breaths-text");
 
 let breathCount = 3; //default value for the breath
 
+// the buttons 
+const begin = document.querySelector(".start");
+const stop =document.querySelector(".stop")
 
 // for the breathing sound 
 const breathInSound = new Audio("breathe-in.mp3");
@@ -77,3 +81,8 @@ begin.addEventListener("click", () => {
 		}, 2000);
 	}, 2000);
 });
+
+//to stop the overall breathing session 
+stop.addEventListener("click", ()=>{
+	location.reload()
+})

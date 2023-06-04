@@ -1,0 +1,155 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300&family=Quicksand:wght@300;500&family=Raleway:wght@200&display=swap");
+
+body {
+	background: url("./bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: inter, sans-serif;
+}
+/* the nav bar  */
+.navbar {
+	margin-top: -1%;
+	float: right;
+	padding: 10px;
+}
+
+.navbar ul {
+	list-style: none;
+	display: flex;
+}
+
+.navbar li {
+	margin-right: 20px;
+}
+
+.navbar a {
+	text-decoration: none;
+	font-family: inter, sans-serif;
+	background-color: #ffffff;
+	opacity: 0.6;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.navbar a:hover {
+	background-color: #9ebbbd;
+}
+
+/* advanced todo button */
+
+.advanced-todo {
+	text-decoration: none;
+  }
+  
+  .advanced-todo button {
+	  display: flex;
+	  width: 20%;
+	  padding: 10px;
+	  background-color: #326fb1;
+	  color: #fff;
+	  border: none;
+	  border-radius: 5px;
+	  outline: none;
+	  cursor: pointer;
+	  align-items: center;
+	  justify-content: center;
+  
+	  margin-top: 2%;
+  
+  }
+  
+  .advanced-todo button:hover {
+	  background-color: #9ebbbd;
+  }
+
+  
+/* the main body */
+.main-container {
+	max-width: 500px;
+	margin-top: 3%;
+	margin-left: 35%;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: oldlace;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 400;
+	text-align: center;
+}
+
+/* the items display */
+#todo-items {
+	width: 90%;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+input[type="text" i] {
+	font-size: 15px;
+	font-weight: 400;
+	color: rgb(147, 147, 223);
+}
+
+#todo-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+#todo-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	margin-bottom: 5px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	list-style-type: decimal;
+}
+
+#todo-list li span {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+#todo-list li button {
+	display: block;
+	padding: 10px;
+	background-color: #d7462d;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #579eea;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+#add:hover {
+	background-color: #235386;
+}
+
+#todo-list li button:hover {
+	background-color: #d6e0ea;
+}
+

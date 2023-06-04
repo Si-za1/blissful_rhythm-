@@ -8,12 +8,64 @@ body{
     text-align: center;
     font-family: Roboto, sans-serif;
     background: #000000;
+    margin-top: 10px;
 }
 
+ /* Navbar */
+ .navbar {
+    float: right;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: inter, sans-serif;
+	background-color: #ffffff;
+	opacity: 0.8;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #9ebbbd;
+}
+
+/* instrcutions */
+#start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width:30%;
+    background: #00FFFF;
+    opacity: 0.8;
+    cursor: pointer;
+    color:white;
+}
+
+/* opponent */
 #opponent-choice{
    width:80px;
 }
 
+#opponent-score{
+    margin:0;
+    color:wheat;
+}
+
+/* user */
 #user-choice{
     width:80px;
 }
@@ -24,11 +76,7 @@ body{
     margin-bottom: 12px;
 }
 
-#opponent-score{
-    margin:0;
-    color:wheat;
-}
-
+/* for the choices to choose from either rock paper or scissor */
 #choices{
     display: flex;
     width:240px;
@@ -44,6 +92,8 @@ body{
     width:20%;
 }
 
+
+/* status of the game */
 #gamestatus{
     margin-top:3%;
     margin-bottom:2%;
@@ -53,13 +103,7 @@ body{
     font-weight: 800;
 }
 
-#start{
-    padding: 10px;
-    background: #00FFFF;
-    opacity: 0.8;
-    cursor: pointer;
-    color:white;
-}
+
 
 #restart{
     padding: 10px;

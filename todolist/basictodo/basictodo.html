@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./basic.css">
+    <link rel="stylesheet" href="./basictodo.css">
     <title>Basic Todo</title>
 </head>
+
 <body>
-   
+    <!-- the navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../../index.html"> <- Take me home </a></li>
+        </ul>
+    </nav>
+
+    <!-- button to the advanced todo -->
+    <a href="../advanced/todolist.html" class="advanced-todo"> <button> Use Advanced Todo </button></a>
+
+    <!-- the main container -->
     <div class="main-container">
         <h1>Your daily todos</h1>
         <input type="text" id="todo-items" placeholder="your todos here ">
@@ -17,6 +29,8 @@
         <button id="add">Add todo </button>
     </div>
 
-    <script src="./basic.js"></script>
+    <!-- the js file -->
+    <script src="./basictodo.js"></script>
 </body>
+
 </html>

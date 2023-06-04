@@ -1,110 +1,143 @@
 :root {
-	--color-button: #2d7444;
-	--color-text: #e6e6fa;
-	--color-extra: #aec6cf;
-	--color-box: #fffafa;
-	--color-container: #c8a2c8;
-	--color-question:#9e6034;
+	--color-primary: #FF5C5C;   /* Vibrant red */
+	--color-secondary: #FFB03B; /* Vibrant orange */
+	--color-text: #0e0d0d;      /* White text color */
+	--color-background: #F4F4F4; /* Light gray background */
+  }
+  
+  /* Navbar */
+.navbar {
+    float: right;
+    padding: 10px;
 }
 
-* {
-	box-sizing: border-box;
+.navbar ul {
+    list-style: none;
+    display: flex;
 }
 
-body {
-	background-color: var(--color-box);
+.navbar li {
+    margin-right: 20px;
 }
 
-.quiz-container {
-	background-color: var(--color-extra);
+.navbar a {
+    text-decoration: none;
+	font-family: inter, sans-serif;
+	background-color: #9ebbbd;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+}
+
+
+  /* the main body */
+  .quiz-container {
+	background-color: var(--color-background);
 	opacity: 0.8;
 	max-width: 50%;
-	margin-left: 25%;
-	margin-top: 2%;
+	margin: 2% auto;
 	padding: 20px;
-}
-
-h1 {
-	font-size: 24px;
-	font-weight: 800;
-	font-family: "Roboto";
-	text-align: center;
-	color: var(--color-box);
-}
-
-#questions {
-	text-align: center;
-	font-size: 14px;
-	font-weight: 300;
-	font-family: "Roboto";
-	text-align: center;
-	color: var(--color-question);
-}
-
-.options {
-	font-size: small;
-    cursor: pointer;
-}
-
-.options ul {
-	list-style-type: none;
-	font-size: 20px;
-	font-weight: 300;
-	font-family: "Roboto";
-	text-align: left;
-	color: var(--color-box);
-}
-
-.options li {
-	cursor: pointer;
-}
-
-
-  
-#submit{
-    width: 100%;
-    color: var(--color-box);
-    background-color: var(--color-button);
-    font-size: 16px;
-    padding:20px;
-    border: none;
-    outline:none;
-    border-radius: 1%;
-    cursor: pointer;
-}
-
-#submit:hover {
-	background-color: #9f8888;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
-
-h2{
+  
+  h1 {
+	font-size: 24px;
+	font-weight: 500;
+	font-family: inter, sans-serif;
+	text-align: center;
+	color: var(--color-text);
+	margin-bottom: 20px;
+  }
+  
+  h2 {
 	font-size: 20px;
-	font-weight: 800;
-	font-family: "Roboto";
+	font-weight: 300;
+	font-family: "inter", sans-serif;
 	color: var(--color-text);
 	text-align: center;
-}
-
-button{
-	color: var(--color-box);
-    background-color: var(--color-button);
-    font-size: 16px;
-    padding:20px;
-    border: none;
-    outline:none;
-    border-radius: 2%;
-    cursor: pointer;
-}
-
-#question-number {
-	text-align: center;
+	margin-bottom: 10px;
+  }
+  
+  /* questions  */
+  #question-number {
 	font-size: 14px;
-	font-weight: 800;
-	font-family: "Roboto";
+	font-weight: 400;
+	font-family: "inter", sans-serif;
+	color: var(--color-primary);
 	text-align: center;
-	color: var(--color-question);
-}
-
-.incorrect-answer {
-	color: red;
+	margin-bottom: 10px;
+  }
+  
+  #questions {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "inter", sans-serif;
+	text-align: center;
+	color: var(--color-text);
+	margin-bottom: 20px;
+  }
+  
+  /* options */
+  .options {
+	font-size: 14px;
+	cursor: pointer;
+  }
+  
+  .options ul {
+	list-style-type: none;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: "inter", sans-serif;
+	text-align: left;
+	color: var(--color-text);
+	margin-bottom: 20px;
+  }
+  
+  .options li {
+	cursor: pointer;
+	margin-bottom: 10px;
+  }
+  
+  /* submit button */
+  #submit {
+	width: 100%;
+	color: var(--color-text);
+	background-color: var(--color-primary);
+	font-size: 16px;
+	font-weight: 400;
+	padding: 15px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #submit:hover {
+	background-color: var(--color-secondary);
+  }
+  
+  .incorrect-answer {
+	color: var(--color-secondary);
+  }
+  
+  /* playmore at the end button */
+  #play-more{
+	color: var(--color-text);
+	background-color: var(--color-primary);
+	font-size: 16px;
+	font-weight: 600;
+	padding: 15px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
   }

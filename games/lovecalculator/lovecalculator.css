@@ -1,10 +1,43 @@
 body {
-	font-family: roboto, sans-serif;
+	font-family: inter;
 	background-image: url("./lovebackground.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
 }
+
+ /* Navbar */
+ .navbar {
+    float: right;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+	font-family: inter, sans-serif;
+	background-color: #9ebbbd;
+	opacity: 0.8;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #ffffff ;
+}
+
+
 /* main container style */
 #main-container {
 	width: 500px;
@@ -18,8 +51,8 @@ body {
 
 /* texts style */
 h1 {
-	font-size: 40px;
-	font-weight: 800;
+	font-size: 28px;
+	font-weight: 500;
 	color: rgb(195, 119, 31);
 }
 
@@ -52,9 +85,9 @@ input[type="text"] {
 	outline: none;
 	padding: 10px;
 	margin-top: 30px;
-	background-color: red;
+	background-color: rgb(219, 58, 58);
 	border-radius: 8px;
-	color: black;
+	color: rgb(236, 206, 206);
 	font-weight: 400;
 }
 
@@ -62,8 +95,7 @@ input[type="text"] {
 
 #result {
 	font-size: 20px;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-family:inter;
 	font-weight: 400;
 	color: rosybrown;
 }

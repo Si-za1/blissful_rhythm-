@@ -1,9 +1,10 @@
+// for the score of the user and the opponent 
 var userChoice;
 var userScore = 0;
 var opponentChoice;
 var opponentScore = 0;
 
-//for the game rounds
+//for the game rounds variable declaration 
 var roundCount = 0;
 const totalRounds = 3;
 var userTotalScore = 0;
@@ -24,22 +25,24 @@ window.onload = function () {
 	}
 };
 
+// for the selection of the choice 
 function selectChoice() {
 	roundCount++;
 
 	userChoice = this.id;
 	document.getElementById("user-choice").src = userChoice + ".svg";
 
+	// random generation for the opponent among the three choices
 	opponentChoice = choices[Math.floor(Math.random() * choiceOptions)];
 	document.getElementById("opponent-choice").src = opponentChoice + ".svg";
 
 
-	// the game logic
+	// the game logic for choosing the rock paper scissor 
 	if (userChoice === opponentChoice) {
 		userScore += 1;
 		opponentScore += 1;
 		document.getElementById("gamestatus").textContent = "It's a tie";
-	} else {
+	} else { 
 		if (opponentChoice === "rock") {
 			if (userChoice === "paper") {
 				userScore += 1;

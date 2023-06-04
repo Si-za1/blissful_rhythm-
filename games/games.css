@@ -1,0 +1,147 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300&family=Quicksand:wght@300;500&family=Raleway:wght@200&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #070707;
+    font-family: "Inter", sans-serif;
+    color: aliceblue;
+}
+
+
+/* Navbar */
+.navbar {
+    float: right;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: inter, sans-serif;
+	background-color: #ffffff;
+	opacity: 0.8;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #9ebbbd;
+}
+
+
+/* Main Body */
+main {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+ .aboutus h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+ .aboutus h4 {
+    width: 40%;
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+ .aboutus p {
+    width: 32%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #766d6d;
+    margin-bottom: 50px;
+}
+
+
+/* game container */
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rps,
+.quiz,
+.lovecalculator {
+    width: 20%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rps .card,
+.quiz .card,
+.lovecalculator .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rps img,
+.quiz img,
+.lovecalculator img {
+    max-width: 100%;
+}
+
+.rps h2,
+.quiz h2,
+.lovecalculator h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rps p,
+.quiz p,
+.lovecalculator p {
+    width:100%;
+    margin-left:35%;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.get-started button{
+    text-decoration: none;
+    font-family: inter, sans-serif;
+	background-color: #ffffff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #170202;
+	font-size: 16px;
+	font-weight: 600;
+    border:none;
+    outline:none;
+}
+
+
+
+.get-started button:hover {
+    background-color: #9ebbbd;
+}

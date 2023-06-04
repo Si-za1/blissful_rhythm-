@@ -10,7 +10,7 @@ const search = document.getElementById("searchInput");
 search.addEventListener("input", () => {
 	const searchedTerm = search.value.toLowerCase();
 
-	const recipeCard = document.getElementsByClassName("menu");
+	const recipeCard = document.getElementsByClassName("menu-container");
 
 	for (let i = 0; i < recipeCard.length; i++) {
 		const recipeCards = recipeCard[i];

@@ -1,0 +1,97 @@
+body {
+    font-family: inter;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F5E1;
+}
+
+header {
+    padding: 10px;
+    
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 300;
+    color: #0b0704;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.recipe {
+    margin-bottom: 40px;
+    background-color: #FFF8DC;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title {
+    color: #FF4500;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.ingredients li,
+.steps li {
+    margin-bottom: 10px;
+}
+
+ol.steps li {
+    list-style-type: decimal;
+    position: relative;
+}
+
+ol.steps li:before {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-weight: 600;
+    color: #FF4500;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #c09685;
+    color: #110f0f;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: #FF6347;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+}

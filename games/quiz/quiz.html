@@ -10,14 +10,24 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../games.html"> <- Take me back </a></li>
+        </ul>
+    </nav>
+    <!-- main app container -->
     <div class="quiz-container" id="quiz">
         <h1> Get ready to test your Brain</h1>
+
+        <!-- the main text for the quiz starts here  -->
         <div class="quiz-header">
             <p id="question-number"></p>
             <p id="questions">
              Multiple choice questions 
             </p>
 
+            <!-- for displaying the options -->
             <div class="options">
                 <ul>
                     <li>
@@ -39,11 +49,11 @@
                         <input class="answer" type="radio" name="answer" id="d">
                         <label for="d" id="optionD"> Option D </label>
                     </li>
-
                 </ul>
             </div>
         </div>
 
+        <!-- submit button -->
         <button id="submit"> Submit </button>
     </div>
     <audio id="endSound" src="sound.mp3"></audio>
