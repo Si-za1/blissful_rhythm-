@@ -1,5 +1,6 @@
 // variable declarations
 	let button = document.getElementById("calculate");
+	let refresh=document.getElementById("refresh");
 
 // for the event listener 
 	button.addEventListener("click", calculateLove);
@@ -21,6 +22,12 @@ function calculateLove() {
 			" " +
 			"have the love chances of :";
 
-		document.getElementById("result-percentage").innerText = lovePercentage.toString() + "%";
+		document.getElementById("result-percentage").textContent = lovePercentage.toString() + "%";
 	}
 }
+
+// for the refresh button
+
+refresh.addEventListener("click", ()=>{
+	location.reload();
+})

@@ -27,7 +27,7 @@ const productTitleError = document.getElementById("expense-error");
 let totalIncome=0;
 let totalExpense=0;
 let balance=0;
-let expenseList=[];
+
 
 //for setting the expense goal for the month 
 
@@ -58,7 +58,7 @@ incomeButton.addEventListener("click", ()=>{
 
 // function to the edit and delete button usage like toogle using bool for expense list container
 const disableButtons=(bool)=>{
-    let editButtons=document.getElementsByClassName("edit");
+    let editButtons=document.getElementsByClassName("edit"); //use of classname made to use array.from 
     Array.from(editButtons).forEach((element)=>{
         element.disabled=bool;
     })

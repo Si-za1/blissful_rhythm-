@@ -8,15 +8,17 @@
 	--extra: #ffc107;
 }
 
+/* resets */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Roboto, sans-serif;
+	
 }
 
 body {
 	background-color: var(--background);
+	font-family: inter;
 }
 
 /* the nav bar  */
@@ -172,7 +174,7 @@ h3{
 	margin-bottom: 1em;
 }
 .hide {
-	display: none;
+	display: none; /* this is hidden here */
 }
 .error {
 	color: #ff465a;

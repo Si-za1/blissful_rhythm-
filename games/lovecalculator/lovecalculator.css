@@ -87,8 +87,22 @@ input[type="text"] {
 	margin-top: 30px;
 	background-color: rgb(219, 58, 58);
 	border-radius: 8px;
-	color: rgb(236, 206, 206);
+	color: rgb(5, 5, 5);
 	font-weight: 400;
+	cursor: pointer;
+}
+
+#refresh {
+	width: 30%;
+	border: none;
+	outline: none;
+	padding: 10px;
+	margin-top: 30px;
+	background-color: rgb(235, 201, 201);
+	border-radius: 8px;
+	color: rgb(20, 19, 19);
+	font-weight: 400;
+	cursor: pointer;
 }
 
 /* result area */
@@ -103,4 +117,71 @@ input[type="text"] {
 #result-percentage {
 	font-size: 30px;
 	font-weight: 300;
+}
+
+
+/* responsive */
+
+@media (max-width: 768px) {
+	
+	.navbar {
+		float: none;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	.navbar ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar li {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.navbar a {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	#main-container {
+		width: 90%;
+		height: auto;
+		margin-top: 10px;
+	}
+
+	input[type="text"] {
+		width: 100%;
+	}
+
+	#calculate {
+		width: 100%;
+		margin-top: 20px;
+	}
+	#refresh {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	.navbar {
+		float: none;
+	}
+
+	.navbar ul {
+		display: block;
+	}
+
+	.navbar li {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	#main-container {
+		padding: 10px;
+	}
 }

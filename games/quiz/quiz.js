@@ -1,15 +1,20 @@
+// get all the variables needed 
+
 const questionElement = document.getElementById("questions");
 const options = document.getElementsByClassName(".options");
 const answerElement = document.querySelectorAll(".answer");
 const questionNumberElement = document.getElementById("question-number");
 
+// buttons
 const submitButton = document.getElementById("submit");
 
+// options
 const optionA = document.getElementById("optionA");
 const optionB = document.getElementById("optionB");
 const optionC = document.getElementById("optionC");
 const optionD = document.getElementById("optionD");
 
+// initializing the question and answers set for the quiz
 const data = [
 	{
 		question: "What is the capital of France?",
@@ -94,17 +99,20 @@ const data = [
 ];
 
 // quiz logic
-shuffleArray(data);
+shuffleArray(data); // to have random questions each time a new game is started
 
+// initialization
 let currentScore = 0;
 let currentQuiz = 0;
 let quizGameData;
+
+// main play function call
 playQuiz();
 
 function playQuiz() {
 	selectAnswers();
 
-	quizGameData = data[currentQuiz];
+	quizGameData = data[currentQuiz]; // the above shuffled data as the index
 
 	questionNumberElement.innerText = `${currentQuiz + 1}`;
 	questionElement.innerText = quizGameData.question;
@@ -119,7 +127,7 @@ function playQuiz() {
 // Fisher-Yates shuffle algorithm
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
+		const j = Math.floor(Math.random() * (i + 1)); // for the random index generator of the data
 		[array[i], array[j]] = [array[j], array[i]];
 	}
 }
@@ -145,10 +153,16 @@ function chooseAnswer() {
 
 submitButton.addEventListener("click", () => {
 	const answer = chooseAnswer();
+		
+	// audio
+	const buttonSound = new Audio("sound.mp3"); 
 
+	// from the choose answer, the ticked answer is checked
 	if (answer) {
-		if (answer === quizGameData.correct) {
+		if (answer === quizGameData.correct)
+		 {
 		  currentScore++;
+		  buttonSound.play();
 		}
 	
 		currentQuiz++;
@@ -159,8 +173,7 @@ submitButton.addEventListener("click", () => {
 		  endQuiz();
 		}
 	  }
-	
-	  const buttonSound = new Audio("sound.mp3"); 
+
 	  buttonSound.play();
 	});
 	
