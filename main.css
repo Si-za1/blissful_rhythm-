@@ -127,3 +127,122 @@ footer p {
 	font-size: 14px;
 	color: #777;
 }
+
+
+/* responsive */
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-wrap: wrap;
+		margin-top: 0;
+		margin-left: 0;
+		padding: 10px 0;
+		justify-content: center;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.navbar li {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.navbar a {
+		padding: 8px 16px;
+	}
+
+	.brandpattern {
+		float: none;
+	}
+
+	.brandpattern .brand {
+		width: 100%;
+		margin-left: 0;
+		text-align: center;
+	}
+	main {
+		margin-top: 100px;
+	}
+	
+	.aboutus h4 {
+		width: 70%;
+		font-size: 40px;
+	}
+	
+	.aboutus p {
+		width: 100%;
+	}
+	
+	.startbutton {
+		margin-left: 0;
+	}
+
+	.startbutton button {
+		padding: 8px 16px;
+		font-size: 12px;
+	}
+
+	h5 {
+		font-size: 14px;
+		margin-top: 3%;
+		margin-left: 0;
+	}
+	
+	footer {
+		margin-top: 8%;
+		margin-left: 0;
+	}
+
+	footer p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navbar {
+		margin-top: 0;
+		margin-left: 0;
+		padding: 10px;
+	}
+
+	.navbar li {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.navbar a {
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+
+	.brandpattern .brand {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.aboutus h4 {
+		width: 90%;
+		font-size: 30px;
+	}
+
+	.startbutton button {
+		padding: 8px 12px;
+		font-size: 10px;
+	}
+
+	h5 {
+		font-size: 12px;
+		margin-top: 5%;
+		margin-left: 0;
+	}
+
+	footer {
+		margin-top: 4%;
+	}
+
+	footer p {
+		font-size: 10px;
+	}
+}

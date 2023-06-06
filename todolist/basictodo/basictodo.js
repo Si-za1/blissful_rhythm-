@@ -23,7 +23,7 @@ function addTask() {
 
 // function to delete a task
 function deleteTask() {
-  var listItem = this.parentNode;
+  var listItem = this.parentNode; // the current node that has been added
   todoList.removeChild(listItem);
 }
 
