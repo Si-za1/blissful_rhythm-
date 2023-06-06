@@ -39,10 +39,10 @@ const breathTextChange = () => {
 	breathText.innerText = breathCount;
 	instructions.innerText = "Breath In";
     breathInSound.play();
+	growCircle();
 	setTimeout(() => {
 		instructions.innerText = "Hold Breath";
         breathHoldSound.play();
-
 		setTimeout(() => {
 			instructions.innerText = "Exhale Breath Slowly";
             breathExhaleSound.play();
@@ -62,8 +62,7 @@ const breathApp = () => {
 			breathText.innerText = breathCount;
 			return;
 		}
-
-		growCircle();
+		// growCircle(); // this removed
 		breathTextChange();
 	}, 12000);
 };
@@ -76,7 +75,7 @@ begin.addEventListener("click", () => {
 		instructions.innerText = "Breathing is about to begin...";
 		setTimeout(() => {
 			breathApp();
-			growCircle();
+			// growCircle(); this to avoid pre animation
 			breathTextUpdate();
 		}, 2000);
 	}, 2000);
