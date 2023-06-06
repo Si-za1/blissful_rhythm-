@@ -22,12 +22,20 @@ window.onload = function () {
 		choice.src = choices[i] + ".svg";
 		choice.addEventListener("click", selectChoice);
 		document.getElementById("choices").appendChild(choice);
+		document.getElementById("choices").classList.add("selected");
 	}
 };
 
 // for the selection of the choice 
 function selectChoice() {
 	roundCount++;
+
+	
+	  // Clear the animation classes from all choices
+	  let choiceElements = document.getElementsByClassName("choice");
+	  for (let i = 0; i < choiceElements.length; i++) {
+		choiceElements[i].classList.remove("selected");
+	  }
 
 	userChoice = this.id;
 	document.getElementById("user-choice").src = userChoice + ".svg";
@@ -87,12 +95,6 @@ function selectChoice() {
 		endGame();
 		return;
 	}
-
-	  // Clear the animation classes from all choices
-	  let choiceElements = document.getElementsByClassName("choice");
-	  for (let i = 0; i < choiceElements.length; i++) {
-		choiceElements[i].classList.remove("selected");
-	  }
 	
 	  // Add the animation class to the selected choices after a short delay
 	  setTimeout(function () {
@@ -121,8 +123,8 @@ function endGame() {
 	}
 
 	// Display the total score
-	document.getElementById("user-total-score").innerText = userTotalScore;
-	document.getElementById("opponent-total-score").innerText = opponentTotalScore;
+	// document.getElementById("user-total-score").innerText = userTotalScore;
+	// document.getElementById("opponent-total-score").innerText = opponentTotalScore;
 
 	// Reset the game
 	userScore = 0;
@@ -139,6 +141,8 @@ function endGame() {
 	// Clear the displayed choices
 	document.getElementById("user-choice").src = "";
 	document.getElementById("opponent-choice").src = "";
+
+    
 }
 
 document.getElementById("restart").addEventListener("click", restartGame);

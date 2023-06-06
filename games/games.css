@@ -138,6 +138,7 @@ main {
 	font-weight: 600;
     border:none;
     outline:none;
+    cursor: pointer;
 }
 
 
