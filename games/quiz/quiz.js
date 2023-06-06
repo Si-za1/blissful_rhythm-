@@ -157,8 +157,15 @@ submitButton.addEventListener("click", () => {
 	// audio
 	const buttonSound = new Audio("sound.mp3"); 
 
+	// Check if answer is chosen
+	if (!answer) {
+		alert("Please choose an answer.");
+		return;
+	}
+		
 	// from the choose answer, the ticked answer is checked
 	if (answer) {
+		
 		if (answer === quizGameData.correct)
 		 {
 		  currentScore++;

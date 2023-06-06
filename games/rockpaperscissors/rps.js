@@ -31,12 +31,15 @@ function selectChoice() {
 
 	userChoice = this.id;
 	document.getElementById("user-choice").src = userChoice + ".svg";
+	document.getElementById("user-choice").classList.add("selected");
 
 	// random generation for the opponent among the three choices
 	opponentChoice = choices[Math.floor(Math.random() * choiceOptions)];
 	document.getElementById("opponent-choice").src = opponentChoice + ".svg";
+	document.getElementById("opponent-choice").classList.add("selected");
 
-
+	
+	
 	// the game logic for choosing the rock paper scissor 
 	if (userChoice === opponentChoice) {
 		userScore += 1;
@@ -84,6 +87,19 @@ function selectChoice() {
 		endGame();
 		return;
 	}
+
+	  // Clear the animation classes from all choices
+	  let choiceElements = document.getElementsByClassName("choice");
+	  for (let i = 0; i < choiceElements.length; i++) {
+		choiceElements[i].classList.remove("selected");
+	  }
+	
+	  // Add the animation class to the selected choices after a short delay
+	  setTimeout(function () {
+		document.getElementById(userChoice).classList.add("selected");
+		document.getElementById(opponentChoice).classList.add("selected");
+	  }, 500);
+	
 }
 
 // end game

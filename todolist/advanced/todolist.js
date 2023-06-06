@@ -20,6 +20,21 @@ window.addEventListener("load", () => {
 	newTodoForm.addEventListener("submit", (e) => {
 		e.preventDefault();
 
+		// if empty cannot aadd the value
+		const contentValue = e.target.elements.content.value;
+		const categoryValue = e.target.elements.category.value;
+
+		// Check if the input is empty or only contains whitespace
+		if (contentValue === "") {
+			alert("Please enter a valid todo.");
+			return;
+		}
+
+		// Check if the category is not selected
+		if (!categoryValue) {
+			alert("Please choose a category.");
+			return;
+		}
 		const todo = {
 			content: e.target.elements.content.value,
 			category: e.target.elements.category.value,
@@ -59,7 +74,7 @@ function displayTodos() {
 		input.checked = todo.done;
 		span.classList.add("bubble");
 
-		// for choosing the category of business or personal or selfcare
+		// for choosing the category of business or personal or selfcare or fitness
 
 		if (todo.category === "personal") {
 			span.classList.add("personal");
@@ -70,7 +85,7 @@ function displayTodos() {
 		}else if(todo.category==="selfcare"){
 			span.classList.add("selfcare");
 			input.classList.remove("personal-checkbox");
-		}else{
+		}else if(todo.category==="fitness"){
 			span.classList.add("fitness");
 			input.classList.remove("personal-checkbox");
 		}
