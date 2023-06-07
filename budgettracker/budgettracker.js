@@ -142,9 +142,22 @@ expenseButton.addEventListener("click", ()=>{
     const totalBalance= totalIncome-sum;
     balanceAmountDisplay.innerText=totalBalance;
 
+     //if the expense exceeds display a message
+     if (totalBalance < 0) 
+     {
+         alert("Your expense exceeds your Income, be wise!")
+     }
+
+    //to add the expense goal and only move forward
+    if(expenseGoalDisplay.innerText==="0")
+    {
+        prompt("Please set your goal first")
+    }
+    
     // for the expense to be exceeding the sum 
     if (sum > expenseGoal) {
         // Disable everything if expenses exceed the goal
+        alert("You exceeded your expense goal, so app is disabled now!")
         disableButtons(true);
         expenseButton.disabled = true;
         expenseTitle.disabled = true;
@@ -153,23 +166,14 @@ expenseButton.addEventListener("click", ()=>{
         expenseGoalInput.disabled = true;
       }
 
-    //if the expense exceeds display a message
-    if (totalBalance < 0) 
-    {
-        const message = "Expense exceeds income!";
-        window.prompt(message);
-    }
+   
 
     listCreator(expenseTitle.value, expenseInput.value)
 
     expenseInput.value="";
     expenseTitle.value="";
 
-    //to add the expense goal and only move forward
-    if(expenseGoalDisplay.innerText==="0")
-    {
-        prompt("Please set your goal first")
-    }
+    
 });
 
 refreshButton.addEventListener("click",()=>{
