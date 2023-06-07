@@ -42,13 +42,14 @@ body {
 	background-color: #9ebbbd;
 }
 
+
 /* instrcutions */
 #start {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 20px;
-	width: 30%;
+	padding: 10px 30px;
+	width: 20%;
 	background: #636f6f;
 	opacity: 0.8;
 	cursor: pointer;
@@ -56,19 +57,19 @@ body {
 
 	font-family: "Inter";
 	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
+	font-weight: 300;
+	font-size: 14px;
 	line-height: 29px;
 }
 
 /* opponent */
 #opponent-choice {
-	width: 80px;
+	width: 50px;
 }
 
-#opponent-score {
+#opponent-total-score {
 	margin: 5px;
-	color: #170202;
+	color: #f4f0f0;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
@@ -78,12 +79,12 @@ body {
 
 /* user */
 #user-choice {
-	width: 80px;
+	width: 50px;
 }
 
-#user-score {
+#user-total-score {
 	margin: 5px;
-	color: #170202;
+	color: #ede2e2;
 	margin-bottom: 12px;
 	font-family: "Inter";
 	font-style: normal;
@@ -95,7 +96,7 @@ body {
 /* for the choices to choose from either rock paper or scissor */
 #choices {
 	display: flex;
-	width: 240px;
+	width: 200px;
 	height: 240px;
 	margin: 0 auto;
 	margin-top: 12px;
@@ -118,16 +119,16 @@ body {
 
 /* status of the game */
 #gamestatus {
-	margin-top: 3%;
+	margin-top: 0.5%;
 	margin-bottom: 2%;
 	font-size: 32px;
-	color: black;
+	color: rgb(19, 15, 15);
 	font-family: inter, sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 
 	font-family: "Inter";
-	font-size: 24px;
-	line-height: 29px;
+	font-size: 30px;
+	
 }
 
 #restart {
@@ -144,4 +145,6 @@ body {
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 29px;
+
+	
 }

@@ -21,21 +21,14 @@ window.onload = function () {
 		choice.id = choices[i];
 		choice.src = choices[i] + ".svg";
 		choice.addEventListener("click", selectChoice);
-		document.getElementById("choices").appendChild(choice);
-		document.getElementById("choices").classList.add("selected");
+		document.getElementById("choices").append(choice);
+		// document.getElementById("choices").classList.add("selected");
 	}
 };
 
 // for the selection of the choice 
 function selectChoice() {
 	roundCount++;
-
-	
-	  // Clear the animation classes from all choices
-	  let choiceElements = document.getElementsByClassName("choice");
-	  for (let i = 0; i < choiceElements.length; i++) {
-		choiceElements[i].classList.remove("selected");
-	  }
 
 	userChoice = this.id;
 	document.getElementById("user-choice").src = userChoice + ".svg";
@@ -52,33 +45,33 @@ function selectChoice() {
 	if (userChoice === opponentChoice) {
 		userScore += 1;
 		opponentScore += 1;
-		document.getElementById("gamestatus").textContent = "It's a tie";
+		document.getElementById("gamestatus").textContent = " Round Status is It's a tie";
 	} else { 
 		if (opponentChoice === "rock") {
 			if (userChoice === "paper") {
 				userScore += 1;
-				document.getElementById("gamestatus").textContent = "User Won";
+				document.getElementById("gamestatus").textContent = " Round Status is: User Won";
 			} else if (userChoice === "scissor") {
 				opponentScore += 1;
-				document.getElementById("gamestatus").textContent = "Opponent Won";
+				document.getElementById("gamestatus").textContent = " Round Status is: Opponent Won";
 			}
 		}
 	}
 	if (opponentChoice === "paper") {
 		if (userChoice === "rock") {
 			opponentScore += 1;
-			document.getElementById("gamestatus").textContent = "Opponent Won";
+			document.getElementById("gamestatus").textContent = " Round Status is: Opponent Won";
 		} else if (userChoice === "scissor") {
 			userScore += 1;
-			document.getElementById("gamestatus").textContent = "User Won";
+			document.getElementById("gamestatus").textContent = " Round Status is: User Won";
 		}
 	} else if (opponentChoice === "scissor") {
 		if (userChoice === "rock") {
 			userScore += 1;
-			document.getElementById("gamestatus").textContent = "User Won";
+			document.getElementById("gamestatus").textContent = " Round Status is: User Won";
 		} else if (userChoice === "paper") {
 			opponentScore += 1;
-			document.getElementById("gamestatus").textContent = "Opponent Won";
+			document.getElementById("gamestatus").textContent = " Round Status is: Opponent Won";
 		}
 	}
 
@@ -86,21 +79,13 @@ function selectChoice() {
 	userTotalScore += userScore;
 	opponentTotalScore += opponentScore;
 
-	//displaying score
-	document.getElementById("user-score").innerText = userScore;
-	document.getElementById("opponent-score").innerText = opponentScore;
+
 
 	// to end the game
 	if (roundCount === totalRounds) {
-		endGame();
+		setTimeout(endGame, 1000); // displaying result after 1 second
 		return;
 	}
-	
-	  // Add the animation class to the selected choices after a short delay
-	  setTimeout(function () {
-		document.getElementById(userChoice).classList.add("selected");
-		document.getElementById(opponentChoice).classList.add("selected");
-	  }, 500);
 	
 }
 
@@ -109,22 +94,22 @@ function endGame() {
 	let gameResult = "";
 
 	if (userTotalScore > opponentTotalScore) {
-		gameResult = `User total score is ${userTotalScore}   so, User Won   and  Game Over `;
+		gameResult = `User's total score is ${userTotalScore}  - which makes User Win hence,  Game Over `;
 		document.getElementById("gamestatus").textContent = gameResult;
 		document.getElementById("success-audio").play();
 	} else if (userTotalScore < opponentTotalScore) {
-		gameResult = ` Opponent total score is  ${opponentTotalScore}  so, Opponent Won   and  Game Over `;
+		gameResult = ` Opponent's total score is  ${opponentTotalScore} - which makes Opponent Win hence, Game Over `;
 		document.getElementById("gamestatus").textContent = gameResult;
 		document.getElementById("gameover-audio").play();
 	} else {
-		gameResult = ` The scores are ${opponentTotalScore} & ${userTotalScore} - which makes it a draw and  Game Over `;
+		gameResult = ` The scores are ${opponentTotalScore} & ${userTotalScore} - which makes it a draw hence,  Game Over `;
 		document.getElementById("gamestatus").textContent = gameResult;
 		document.getElementById("gameover-audio").play();
 	}
 
 	// Display the total score
-	// document.getElementById("user-total-score").innerText = userTotalScore;
-	// document.getElementById("opponent-total-score").innerText = opponentTotalScore;
+	document.getElementById("user-total-score").innerText = userTotalScore;
+	document.getElementById("opponent-total-score").innerText = opponentTotalScore;
 
 	// Reset the game
 	userScore = 0;
